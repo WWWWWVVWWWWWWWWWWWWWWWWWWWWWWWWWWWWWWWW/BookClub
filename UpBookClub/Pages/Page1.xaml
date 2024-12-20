@@ -1,0 +1,27 @@
+﻿<Page x:Class="UpBookClub.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:UpBookClub.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid>
+        <ListView Name="ProductsListView" SelectionMode="Single">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Name}" Width="150" />
+                    <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Description}" Width="250" />
+                    <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Price}" Width="100" />
+                    <GridViewColumn Header="Скидка" DisplayMemberBinding="{Binding Discount}" Width="100" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button Name="ViewOrderButton" Content="Просмотреть заказ" Visibility="Visible"
+                HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10" 
+                Click="ViewOrderButton_Click" />
+    </Grid>
+</Page>
